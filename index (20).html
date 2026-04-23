@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Image</title>
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'google-blue': '#4285F4',
+                        'google-red': '#EA4335',
+                        'google-yellow': '#FBBC05',
+                        'google-green': '#34A853',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .image-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                padding: 2rem;
+            }
+            
+            .google-image {
+                max-width: 100%;
+                height: auto;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .google-image:hover {
+                transform: scale(1.02);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="image-container">
+        <img src="https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/fcf7b843177146b790230611caa8495b.jpeg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=20260423204907CD835891D70B3FB9F140&rrcfp=8a172a1a&x-expires=1777553348&x-signature=%2BN3wwPCLCZp3Xq8ag5R%2FflzENb8%3D" 
+             alt="Google Logo" 
+             class="google-image rounded-lg">
+    </div>
+</body>
+</html>
